@@ -1,3 +1,3 @@
-[Clean code](clean_code/Readme.md)
+[Clean code](clean_code)
 
-[Design pattern](design_pattern/Readme.md)
+[Design pattern](design_pattern)
