@@ -1,7 +1,8 @@
 # Table of contents
 
-* [docs](README.md)
-  * [Message broker](docs/message-broker.md)
-  * [Nosql và RDBMS](docs/nosql-and-rdbms.md)
-  * [Clean code](docs/clean\_code/Readme.md)
-  * [Design pattern](docs/design\_pattern/Readme.md)
+## Other
+
+* [Message broker](README.md)
+* [Nosql và RDBMS](other/nosql-and-rdbms.md)
+* [Clean code](other/clean\_code.md)
+* [Design pattern](other/design\_pattern.md)
