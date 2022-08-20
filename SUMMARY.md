@@ -19,11 +19,11 @@
 
 ## database
 
-* [Nosql và RDBMS](<README (1).md>)
+* [Nosql và RDBMS](<README (2).md>)
 
 ## Message queue
 
-* [Message queue](<README (1) (1).md>)
+* [Message queue](<README (1).md>)
 
 ## Other
 
@@ -32,4 +32,4 @@
 
 ## deploy
 
-* [Jenkins](deploy/jenkins.md)
+* [Jenkins](deploy/jenkins/jenkins.md)
