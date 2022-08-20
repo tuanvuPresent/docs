@@ -6,7 +6,7 @@
 
 ## Message queue
 
-* [Message queue](message-queue/message-broker.md)
+* [Message queue](<README (1).md>)
 
 ## Other
 
@@ -15,4 +15,5 @@
 
 ## deploy
 
-* [Jenkins](deploy/jenkins.md)
+* [Jenkins](deploy/jenkins/README.md)
+  * [Jenkins](deploy/jenkins/jenkins.md)
