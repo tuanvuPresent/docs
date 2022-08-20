@@ -1,6 +1,5 @@
----
-description: '💬 Ask me about ... ⚡ Fun fact: ... 💕 💕 💕'
----
-
 # Hi there 👋
 
+💬 Ask me about ...&#x20;
+
+⚡ Fun fact: ... 💕 💕 💕

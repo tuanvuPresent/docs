@@ -4,7 +4,7 @@
 
 ## Python
 
-* [Tutorial](<README (1).md>)
+* [Tutorial](<README (3).md>)
   * [Iterators and Iterables and generators ](python/tutorial/iterators-and-iterables-and-generators.md)
   * [Lambda Operator](python/tutorial/lambda-operator.md)
   * [Decorators ](python/tutorial/decorators.md)
@@ -25,7 +25,7 @@
 
 ## Message queue
 
-* [Message queue](<README (1) (1).md>)
+* [Message queue](<README (1).md>)
 
 ## Other
 
