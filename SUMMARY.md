@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Hi there 👋](README.md)
+
 ## Python
 
-* [Tutorial](README.md)
+* [Tutorial](<README (1).md>)
   * [Iterators and Iterables and generators ](python/tutorial/iterators-and-iterables-and-generators.md)
   * [Lambda Operator](python/tutorial/lambda-operator.md)
   * [Decorators ](python/tutorial/decorators.md)
@@ -19,11 +21,11 @@
 
 ## database
 
-* [Nosql và RDBMS](README.md)
+* [Nosql và RDBMS](<README (2).md>)
 
 ## Message queue
 
-* [Message queue](<README (1).md>)
+* [Message queue](<README (1) (1).md>)
 
 ## Other
 
