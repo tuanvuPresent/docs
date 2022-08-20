@@ -19,7 +19,7 @@
 
 ## database
 
-* [Nosql và RDBMS](<README (2).md>)
+* [Nosql và RDBMS](README.md)
 
 ## Message queue
 

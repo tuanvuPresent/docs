@@ -4,17 +4,11 @@
 
 ### Message Base: RabitMQ, ActiveMQ, SQS, ZeroMQ, MSMQ, IronMQ
 
-1. Việc đảm bảo mỗi consumer đều nhận được message và duy nhất một lần là quan trọng nhất.
-2. Các đặc trưng của loại Message Base như: lưu trạng thái của các consumer nhằm đảm bảo tất cả các consumer đều nhận được message từ topic mà đã subscribe.
-3. Sau khi tất cả các consumer nhận được message thì message đó sẽ bị xóa.
-4. Khi có một message mới một consumer chỉ có thể lấy được môt message duy nhất
+> Message Base là loại message queue truyền thống, thích hợp làm hệ thống trao đổi message giữa các service. Việc đảm bảo mỗi consumer đều nhận được message và duy nhất một lần là quan trọng nhất.Các đặc trưng của loại Message Base như: lưu trạng thái của các consumer nhằm đảm bảo tất cả các consumer đều nhận được message từ topic mà đã subscribe, sau khi tất cả các consumer nhận được message thì message đó sẽ bị xóa, khi có một message mới một consumer chỉ có thể lấy được môt message duy nhất.
 
 ### Data Pipeline: Kafka, Kinesis, RocketMQ
 
-1. Việc đảm bảo mỗi consumer đều phải nhận được message và duy nhất một lần không phải là ưu tiên số một, mà thay vào đó là khả năng lưu trũ message vả tốc độ truyền tải message.&#x20;
-2. Khi có message mới, consumer sẽ lựa chọn số lượng message mà mình muốn lấy, chính vì thế mà cùng một message consumer có thể nhận đi nhận lại nhiều lần.&#x20;
-3. Những hệ thống sử dụng message queue loại này thường là hệ thống Event Sourcing, hoặc hệ thống đồng bộ dữ liệu từ những database khác nhau Các đặc trưng của loại Data Pipeline như: không lưu trạng thái của consumer, message được xóa sau một khoảng thời gian nhất định,&#x20;
-4. Khi có một message mới, consumer có thể tùy chọn lấy về một danh sách message bao gồm cả message cũ hoặc chỉ lấy message mới.&#x20;
+> Data Pipeline có cách lưu trữ message cũng như truyền tải message đến consumer hoàn toán khác với hệ thống message queue truyền thống. Việc đảm bảo mỗi consumer đều phải nhận được message và duy nhất một lần không phải là ưu tiên số một, mà thay vào đó là khả năng lưu trũ message vả tốc độ truyền tải message. Khi có message mới, consumer sẽ lựa chọn số lượng message mà mình muốn lấy, chính vì thế mà cùng một message consumer có thể nhận đi nhận lại nhiều lần. Những hệ thống sử dụng message queue loại này thường là hệ thống Event Sourcing, hoặc hệ thống đồng bộ dữ liệu từ những database khác nhau Các đặc trưng của loại Data Pipeline như: không lưu trạng thái của consumer, message được xóa sau một khoảng thời gian nhất định, khi có một message mới, consumer có thể tùy chọn lấy về một danh sách message bao gồm cả message cũ hoặc chỉ lấy message mới. Khi các bạn lựa chọn message queue cho hệ thống của mình, các bạn nên xác định rõ mục địch của hệ thống messague queue để xem mình cần loại trong hai loại trên. Việc xác định được loại message queue nào mình cần sẽ giúp các bạn giảm bớt thời gian tìm hiểu cũng như tìm được chính sác cái mà mình cần.
 
 ## Một số loại message queue
 
@@ -50,10 +44,10 @@ Xử lý dữ liệu lớn, cần persistent data thì dùng Kafka Kafka là m�
 
 ### Producer
 
-* Ack = 0: sẽ không đợi phản hồi từ consumer trước khi cho rằng thông báo đã được gửi thành công
-* Ack = 1: sẽ nhận được phản hồi thành công từ consumer tại thời điểm bản sao lãnh đạo nhận được thông báo
-* Ack = all: sẽ nhận được phản hồi thành công từ consumer khi tất cả các bản sao đồng bộ nhận được thông báo
-* Giả sử topic\_1 có 2 partition là p1 và p2:
+* ack = 0: sẽ không đợi phản hồi từ consumer trước khi cho rằng thông báo đã được gửi thành công
+* ack = 1: sẽ nhận được phản hồi thành công từ consumer tại thời điểm bản sao lãnh đạo nhận được thông báo
+* ack = all: sẽ nhận được phản hồi thành công từ consumer khi tất cả các bản sao đồng bộ nhận được thông báo
+* giả sử topic\_1 có 2 partition là p1 và p2:
   * 1 producer publish bản ghi mới vào, bản ghi này có thể nằm ở p1 hoặc p2, tùy cách producer đẩy (mặc định là round-robin, tức là bản ghi trước đã vào p1 thì bản ghi sau sẽ vào p2 cho đều).
   * Để tăng tốc, ta có thể viết 2 producer, mỗi producer chi đẩy dữ liệu vào 1 partition, như vậy về logic tốc độ ghi đã tăng gấp 2.
 
