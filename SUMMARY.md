@@ -1,12 +1,29 @@
 # Table of contents
 
+## Python
+
+* [Tutorial](README.md)
+  * [Iterators and Iterables and generators ](python/tutorial/iterators-and-iterables-and-generators.md)
+  * [Lambda Operator](python/tutorial/lambda-operator.md)
+  * [Decorators ](python/tutorial/decorators.md)
+  * [Lập trình đa luồng](python/tutorial/lap-trinh-da-luong.md)
+  * [Best practices](python/tutorial/best-practices.md)
+* [Django](python/django.md)
+* [Flask](python/flask.md)
+* [Fastapi](python/fastapi.md)
+
+## Struct data and algorithms&#x20;
+
+* [Struct data](struct-data-and-algorithms/struct-data.md)
+* [Algorithms](struct-data-and-algorithms/algorithms.md)
+
 ## database
 
-* [Nosql và RDBMS](README.md)
+* [Nosql và RDBMS](<README (1).md>)
 
 ## Message queue
 
-* [Message queue](<README (1).md>)
+* [Message queue](<README (1) (1).md>)
 
 ## Other
 
@@ -15,5 +32,4 @@
 
 ## deploy
 
-* [Jenkins](deploy/jenkins/README.md)
-  * [Jenkins](deploy/jenkins/jenkins.md)
+* [Jenkins](deploy/jenkins.md)

@@ -12,9 +12,9 @@
 
 {% code lineNumbers="true" %}
 ```java
-Bad: 
+// Bad 
 int a // elapsed time in days
-Good: 
+// Good
 int elapsedTimeInDays
 ```
 {% endcode %}
@@ -35,13 +35,13 @@ getCustomerData();
 
 {% code lineNumbers="true" %}
 ```javascript
-Bad:
+// Bad
 class DtaRcrd102 {
     private Date genymdhms;
     private Date modymdhms;
     private final String pszqint = "102";
 };
-Good:
+// Good
 class Customer {
     private Date generationTimestamp;
     private Date modificationTimestamp;
@@ -85,8 +85,7 @@ for (let i = 0; i < MINUTES_OF_THE_HOUR; i++) {
 
 {% code lineNumbers="true" %}
 ```java
- (Screaming Snake Case) 
- const DAYS_IN_A_YEAR = 365;
+  const DAYS_IN_A_YEAR = 365;
 ```
 {% endcode %}
 
@@ -115,10 +114,9 @@ Chúng tôi muốn code được đọc tuần tự từ trên xuống. Chúng t
 {% endhint %}
 
 {% hint style="info" %}
-{% code overflow="wrap" %}
+{% code overflow="wrap" lineNumbers="true" %}
 ```
 Nguyên tắc Đơn nhiệm: Mỗi lớp chỉ nên chịu trách nhiệm về một nhiệm vụ cụ thể nào đó mà thôi.
-
 Nguyên tắc Đóng & mở: Chúng ta nên hạn chế việc chỉnh sửa bên trong một Class hoặc Module có sẵn, thay vào đó hãy xem xét mở rộng chúng.
 ```
 {% endcode %}
@@ -137,8 +135,10 @@ Hàm có một đối số đầu vào sẽ là tốt “đứng thứ 2” (t�
 ## Comment
 
 {% hint style="info" %}
-<pre><code>“Đừng biến đống code gớm ghiếc của bạn thành comment – hãy viết lại nó”
-<strong>BRIAN W. KERNIGHAN AND P. J. PLAUGHER</strong></code></pre>
+```
+“Đừng biến đống code gớm ghiếc của bạn thành comment – hãy viết lại nó” 
+BRIAN W. KERNIGHAN AND P. J. PLAUGHER
+```
 {% endhint %}
 
 Một số comment là cần thiết hoặc có ích. Chúng ta sẽ xem xét một vài trường hợp mà tôi cho là xứng đáng để bạn bỏ công ra viết. Tuy nhiên, hãy nhớ rằng comment thật sự tốt là comment không cần phải viết ra.
