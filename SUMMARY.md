@@ -5,16 +5,16 @@
 ## Python
 
 * [Tutorial](<README (3).md>)
-  * [Iterators and Iterables and generators ](python/tutorial/iterators-and-iterables-and-generators.md)
+  * [Iterators and Iterables and generators](python/tutorial/iterators-and-iterables-and-generators.md)
   * [Lambda Operator](python/tutorial/lambda-operator.md)
-  * [Decorators ](python/tutorial/decorators.md)
+  * [Decorators](python/tutorial/decorators.md)
   * [Lập trình đa luồng](python/tutorial/lap-trinh-da-luong.md)
   * [Best practices](python/tutorial/best-practices.md)
 * [Django](python/django.md)
 * [Flask](python/flask.md)
 * [Fastapi](python/fastapi.md)
 
-## Struct data and algorithms&#x20;
+## Struct data and algorithms
 
 * [Struct data](struct-data-and-algorithms/struct-data.md)
 * [Algorithms](struct-data-and-algorithms/algorithms.md)
@@ -22,6 +22,7 @@
 ## database
 
 * [Nosql và RDBMS](<README (2).md>)
+* [Index sql](database/index-sql.md)
 
 ## Message queue
 
