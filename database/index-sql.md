@@ -1,5 +1,5 @@
-# Index sql
-
+# mysql perfomance
+ 
 ---
 
 - B-tree
@@ -29,3 +29,37 @@
   group by c1, c2
   order by c1, c2
   ```
+---
+
+- Lock row và lock table
+- Table Conversions
+    + alter
+    + dump and import
+    + create and select
+- Show profile
+- Optimal
+    + number vs string
+    + Not null
+    + Int(1) vs int(20) lưu trữ và tính toán như nhau
+    + Temp table không hỗ trợ blob và text ( chuyển blob thành chuỗi trong query thì có thế lưu trên mem)
+    + Đếm không chính xác hoặc đếm chính xác với các truy vấn phạm vi nhỏ
+- Hash index
+    + not sort
+    + where >, <
+- Index:
+    + giảm dữ liệu phải kiểm tra
+    + tránh sắp xếp và bảng tạm thời
+    + I/O ngẫu nhiên thành tuần tự
+- Id
+    + auto increase
+    + uuid
+    + Chèn giá trị với id không tuần tự khiến dữ liệu bị phân mảnh
+- Optimazing
+    + Chia nhỏ query
+    + sort ( Two passes (old) , single pass)
+    + count('*') đếm số hàng, count('c1') đếm số hàng có c1 != null
+- Partitions
+    + khi thêm, sửa, xoá ( cập nhật lại data vào đúng phân vùng )
+    + các loại phân vùng (range,list, hash, key )
+    + Tương tự như index ( Year(DAY) = 2000 partition không hoạt động )
+
