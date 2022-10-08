@@ -23,6 +23,7 @@
 
 * [Nosql và RDBMS](<README (2).md>)
 * [Index sql](database/index-sql.md)
+* [Inverted Index](database/inverted-index.md)
 
 ## Message queue
 
