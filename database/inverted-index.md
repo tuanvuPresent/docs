@@ -20,3 +20,20 @@
 
 - N-Gram: N-gram là kĩ thuật tách một chuỗi thành các chuỗi con, thông qua việc chia đều chuỗi đã có thành các chuỗi con đều nhau, có độ dài là N.
 - Morphological Analysis: Về cơ bản Morphological Analysis là một kĩ thuật phổ biến trong xử lý ngôn ngữ tự nhiên (Natural Language Processing). Tức là chúng ta sẽ tách chuỗi thành những từ có nghĩa.
+- Match...against
+```sql
+ SELECT * FROM books_book WHERE MATCH(`description`) AGAINST('am')
+```
+- IN BOOLEAN MODE
+```sql
+ SELECT * FROM books_book WHERE MATCH(`description`) AGAINST('am' IN BOOLEAN MODE)
+```
+
+- Query Expansion
+```sql
+ SELECT * FROM books_book WHERE MATCH(`description`) AGAINST('am' WITH QUERY EXPANSION)
+```
+
+>Tóm lai, bạn cần lưu ý những vấn đề sau khi làm việc với full text search trong MySQL:
+>- Độ dài tối thiểu cho từ cần tìm là 4. Ví dụ bạn tìm từ "và" hoặc "tôi" thì mặc định MySQL sẽ xác định đó là những từ vô nghĩa. Vì trong tiếng Anh những từ có 3 chữ cái đều là vô nghĩa. Tuy nhiên bạn có thể mở file /etc/mysql/my.cnf và tìm đến dòng ft_min_word_len = 3 chỉnh lại số mong muốn.
+>- Có một số từ Stop Words sẽ bị bỏ qua nằm trong file storage/myisam/ft_static.c. Bạn muốn thay đổi thì hãy vào file đó nhé.
