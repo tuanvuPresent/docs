@@ -76,6 +76,9 @@ Xử lý dữ liệu lớn, cần persistent data thì dùng Kafka Kafka là m�
 * Topic là khái niệm về mặt logic để tổ chức dữ liệu, kafka tất nhiên cần phải lưu trữ các bản ghi trong topic này trên các server cài kafka (kafka broker), partitions là việc tổ chức dữ liệu trên các server này, mỗi partition là 1 thư mục vật lý, mỗi partition gồm nhiều file khác nhau, các file này chính là các file chứa dữ liệu.
 * 1 Kafka cluster có nhiều Topic, mỗi topic gồm nhiều partition, mỗi partition là tập hợp nhiều segment
 
+#### Order of Messages 
+- Trong Kafka, trật tự chỉ có thể được đảm bảo trong một phân vùng. Điều này có nghĩa là nếu các tin nhắn được gửi từ producer theo một thứ tự cụ thể, thì broker sẽ ghi chúng vào một phân vùng và tất cả consumer sẽ đọc từ đó theo cùng một thứ tự.
+
 ***
 
 #### Mô hình Kafka với RabbitMQ khác nhau lớn nhất có lẽ là 1 thằng pull và 1 thằng push.
