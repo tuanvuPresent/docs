@@ -1,11 +1,13 @@
-## Thay đổi tên column
+# Migrate database best
 
-- Tạo cột mới 
-- Sao chép dữ liệu hiện tại sang cột mới
-- Thay đổi code
-- Đổi tên cột cữ ( hoặc xóa)
+### Thay đổi tên column
 
-## ALTER TABLE on a large table with an indexed column
+* Tạo cột mới
+* Sao chép dữ liệu hiện tại sang cột mới
+* Thay đổi code
+* Đổi tên cột cữ ( hoặc xóa)
+
+### ALTER TABLE on a large table with an indexed column
 
 ```sql
 SET SQL_LOG_BIN = 0;
