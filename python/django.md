@@ -28,7 +28,7 @@
 
         return Response()
 ```
---> Đoạn code save thành công book1 và book2 trong database.
+--> Đoạn code save thành công book1 và book3 trong database.
 - on_commit: Thực hiện một hành động liên quan đến giao dịch cơ sở dữ liệu hiện tại, nhưng chỉ khi giao dịch được thực hiện thành công
 ```python
     # celery task
