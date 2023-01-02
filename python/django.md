@@ -1,6 +1,6 @@
 # Django
 
-## Best practices
+## Sql injection 
 - Django raw query sql injection 
 ```python
   name = " 1 OR  1=1"
