@@ -25,6 +25,7 @@
 * [Index sql](database/index-sql.md)
 * [Inverted Index](database/inverted-index.md)
 * [Migrate database best](database/migrate-database-best.md)
+* [Datatype](database/datatype.md)
 
 ## Message queue
 
