@@ -44,12 +44,12 @@ print(query)
 ```
 > Câu query trên chỉ thực hiện truy vấn 1 lần
 - Khi nào query được thực thi
-+ Vòng lặp
-+ Slicing
-+ repr()
-+ len()
-+ list
-+ bool( Nếu bạn chỉ muốn check 1 QuerySet có tồn tại hay không, sẽ cho tốc độ truy vấn nhanh và hiệu quả hơn nếu bạn dùng exists() )
+  + Vòng lặp
+  + Slicing
+  + repr()
+  + len()
+  + list
+  + bool( Nếu bạn chỉ muốn check 1 QuerySet có tồn tại hay không, sẽ cho tốc độ truy vấn nhanh và hiệu quả hơn nếu bạn dùng exists() )
 - prefetch_related và select_related
 ```python
 students = Student.objects.all()
