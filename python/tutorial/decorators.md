@@ -28,3 +28,23 @@ run
 end
 
 ```
+
+```python
+import time
+import functools
+
+# Define a decorator function to cache the result of a function with a timeout
+def cache(timeout):
+    memo = {}
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args):
+            if args in memo and time.time() - memo[args]['time'] < timeout:
+                return memo[args]['result']
+            else:
+                result = func(*args)
+                memo[args] = {'result': result, 'time': time.time()}
+                return result
+        return wrapper
+    return decorator
+```
