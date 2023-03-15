@@ -54,3 +54,21 @@ class MyClass:
         # method code
 
 ```
+
+## Magic Methods
+
+1. `__init__(self, ...)`: Phương thức khởi tạo, được gọi khi một đối tượng mới được tạo.
+2. `__str__(self)`: Phương thức chuyển đổi đối tượng thành chuỗi, được sử dụng khi đối tượng được in ra.
+3. `__add__(self, other)`: Phương thức cộng hai đối tượng với nhau.
+4. `__sub__(self, other)`: Phương thức trừ hai đối tượng với nhau.
+5. `__eq__(self, other)`: Phương thức so sánh hai đối tượng có bằng nhau hay không.
+6. `__lt__(self, other)`: Phương thức so sánh hai đối tượng có đối tượng thứ nhất nhỏ hơn đối tượng thứ hai hay không.
+7. `__len__(self)`: Phương thức trả về độ dài của đối tượng.
+8. `__getattr__(self, name)`: Phương thức được gọi khi một thuộc tính không tồn tại trên đối tượng.
+9. `__setattr__(self, name, value)`: Phương thức được gọi khi một giá trị thuộc tính được gán cho đối tượng.
+10. `__del__(self)`: Phương thức được gọi khi đối tượng bị xóa.
+11. `__new__` là một magic method khác trong Python, được sử dụng để tạo một instance mới của một class. Nó là method đầu tiên được gọi khi một instance của class được khởi tạo.
+
+    `__new__` là một static method (method của class, không phải instance của class) và nó trả về một instance của class. Nó có thể được sử dụng để customize cách một instance được tạo ra, ví dụ như thay đổi thuộc tính mặc định của instance, hoặc kiểm tra xem instance đã được tạo trước đó chưa để tái sử dụng nó.
+
+    Về cơ bản, `__new__` được sử dụng để tạo một instance mới và trả về nó cho `__init__`, method thứ hai được gọi khi một instance mới được tạo ra.
