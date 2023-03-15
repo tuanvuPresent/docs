@@ -5,6 +5,7 @@
 ## Python
 
 * [Tutorial](<README (3).md>)
+  * [Class](python/readme-3/class.md)
   * [Iterators and Iterables and generators](python/tutorial/iterators-and-iterables-and-generators.md)
   * [Lambda Operator](python/tutorial/lambda-operator.md)
   * [Decorators](python/tutorial/decorators.md)

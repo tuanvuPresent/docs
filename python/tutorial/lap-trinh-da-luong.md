@@ -1,43 +1,47 @@
-## Mở đầu
-- Xử lý đồng thời là khả năng phân chia và điều phối nhiều tác vụ khác nhau trong cùng một khoảng thời gian và tại một thời điểm chỉ có thể xử lý một tác vụ. 
-Khái niệm này trái ngược với xử lý tuần tự (sequential processing). Xử lý tuần tự là khả năng xử lý chỉ một tác vụ trong một khoảng thời gian, các tác vụ sẽ được thực thi theo thứ tự hết tác vụ này sẽ thực thi tiếp tác vụ khác.
-Tất cả các chương trình đang chạy trong máy tính chúng ta chạy đều do hệ điều hành quản lý, với mỗi chương trình đang chạy như vậy được gọi là một process (tiến trình) và được cấp một process id (PID) để hệ điều hành dễ dàng quản lí. Các tác vụ của tiến trình sẽ được CPU core (nhân CPU) của máy tính xử lý
-Nhân CPU sẽ tận dụng thời gian rảnh của tác vụ này để đi làm tác vụ khác, một lúc thì làm tác vụ nhỏ này, một lúc khác thì làm tác vụ nhỏ khác
+# Lập trình đa luồng
+
+### Mở đầu
+
+* Xử lý đồng thời là khả năng phân chia và điều phối nhiều tác vụ khác nhau trong cùng một khoảng thời gian và tại một thời điểm chỉ có thể xử lý một tác vụ. Khái niệm này trái ngược với xử lý tuần tự (sequential processing). Xử lý tuần tự là khả năng xử lý chỉ một tác vụ trong một khoảng thời gian, các tác vụ sẽ được thực thi theo thứ tự hết tác vụ này sẽ thực thi tiếp tác vụ khác. Tất cả các chương trình đang chạy trong máy tính chúng ta chạy đều do hệ điều hành quản lý, với mỗi chương trình đang chạy như vậy được gọi là một process (tiến trình) và được cấp một process id (PID) để hệ điều hành dễ dàng quản lí. Các tác vụ của tiến trình sẽ được CPU core (nhân CPU) của máy tính xử lý Nhân CPU sẽ tận dụng thời gian rảnh của tác vụ này để đi làm tác vụ khác, một lúc thì làm tác vụ nhỏ này, một lúc khác thì làm tác vụ nhỏ khác
 
 ![](images/lap-trinh-tuan-tu.png)
 
 ![](images/lap-trinh-dong-thoi.png)
 
-- Xử lý song song là khả năng xử lý nhiều tác vụ khác nhau trong cùng một thời điểm, các tác vụ này hoàn toàn độc lập với nhau. Xử lý song song chỉ có thể thực hiện trên máy tính có số nhân lớn hơn 1. Thay vì một nhân CPU chúng ta chỉ có thể xử lý một tác vụ nhỏ tại một thời điểm thì khi số nhân CPU có nhiều hơn chúng ta có thể xử lý các tác vụ song song với nhau cùng lúc trên các nhân CPU.
+* Xử lý song song là khả năng xử lý nhiều tác vụ khác nhau trong cùng một thời điểm, các tác vụ này hoàn toàn độc lập với nhau. Xử lý song song chỉ có thể thực hiện trên máy tính có số nhân lớn hơn 1. Thay vì một nhân CPU chúng ta chỉ có thể xử lý một tác vụ nhỏ tại một thời điểm thì khi số nhân CPU có nhiều hơn chúng ta có thể xử lý các tác vụ song song với nhau cùng lúc trên các nhân CPU.
 
-![](images/lap-trinh-song-song.png)
----
-## Xử lý đồng thời và song song trong python
-### Multithreading
-- Khác với các ngôn ngữ lập trình khác, 
-trong python, khi sử dụng multithreading thì thực tế các threads 
-sẽ được chạy trên cùng một CPU (concurrent) chứ không thực hiện trên các CPU khác nhau (GIL).
-- Do đó, khi các threads chạy các jobs yêu cầu nhiều tính toán thì trên thực tế, performance sẽ bị giảm chứ không tăng như ta thường nghĩ khi nói đến multithreading.
-- Tuy nhiên, như vậy không có nghĩa là multi-threading là vô dụng. Trên thực tế, multithreading có thể được sử dụng cho tác vụ IO. Vì với tác vụ IO, CPU không cần thực hiện gì cả mà chỉ cần đợi kết quả IO trả về.
+### ![](images/lap-trinh-song-song.png)
+
+### Xử lý đồng thời và song song trong python
+
+#### Multithreading
+
+* Khác với các ngôn ngữ lập trình khác, trong python, khi sử dụng multithreading thì thực tế các threads sẽ được chạy trên cùng một CPU (concurrent) chứ không thực hiện trên các CPU khác nhau (GIL).
+* Do đó, khi các threads chạy các jobs yêu cầu nhiều tính toán thì trên thực tế, performance sẽ bị giảm chứ không tăng như ta thường nghĩ khi nói đến multithreading.
+* Tuy nhiên, như vậy không có nghĩa là multi-threading là vô dụng. Trên thực tế, multithreading có thể được sử dụng cho tác vụ IO. Vì với tác vụ IO, CPU không cần thực hiện gì cả mà chỉ cần đợi kết quả IO trả về.
 
 ```
 multithreading thường chỉ được sử dụng để IO
 ```
 
-### Multiprocessing
-- Processing: Dùng để song song hóa các function. Ví dụ, ta có thể chạy nhiều functions trên các CPU khác nhau.
-- Pool: Dùng để song song hóa dữ liệu. Ví dụ, ta có thể chạy cùng một function nhưng với các bộ dữ liệu inputs khác nhau.
+#### Multiprocessing
+
+* Processing: Dùng để song song hóa các function. Ví dụ, ta có thể chạy nhiều functions trên các CPU khác nhau.
+* Pool: Dùng để song song hóa dữ liệu. Ví dụ, ta có thể chạy cùng một function nhưng với các bộ dữ liệu inputs khác nhau.
 
 ```
 Multiprocessing is best for computations
 ```
----
-## Một số VD
+
+***
+
+### Một số VD
 
 Tính tống từ 1 đến N
-- Tính bình thường
-- Tính bằng cách sử dung threads
-- Tính bằng cách sử dụng process
+
+* Tính bình thường
+* Tính bằng cách sử dung threads
+* Tính bằng cách sử dụng process
 
 ```python
 import multiprocessing
@@ -146,10 +150,10 @@ if __name__ == '__main__':
     run_threads_pool()
     run_process()
     run_process_pool()
-
 ```
 
 Chạy từng trường hợp
+
 ```python
 if __name__ == '__main__':
     run_normal()
@@ -158,10 +162,10 @@ if __name__ == '__main__':
     run_process()
     run_process_pool()
 
-
 ```
 
 Đây thời gian thực thi với N = 10 000 000
+
 ```python
 # run_normal
 # time 0.8122878074645996
