@@ -32,6 +32,6 @@ cursor = connection.cursor()
 cursor.execute('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE')
     +  READ COMMITTED
     +  READ UNCOMMITTED
-    +  REPEATABLE READS
+    +  REPEATABLE READ
     +  SERIALIZABLE
 ```
