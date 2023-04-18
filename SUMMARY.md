@@ -14,7 +14,8 @@
   * [Singleton](python/readme-3/singleton.md)
   * [Logging](python/readme-3/logging.md)
   * [Best practices](python/tutorial/best-practices.md)
-* [Django](python/django.md)
+* [Django](python/django/README.md)
+  * [Transaction](python/django/transaction.md)
 * [Flask](python/flask.md)
 * [Fastapi](python/fastapi.md)
 
