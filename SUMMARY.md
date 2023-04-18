@@ -12,6 +12,7 @@
   * [Decorators](python/tutorial/decorators.md)
   * [Lập trình đa luồng](python/tutorial/lap-trinh-da-luong.md)
   * [Singleton](python/readme-3/singleton.md)
+  * [Logging](python/readme-3/logging.md)
   * [Best practices](python/tutorial/best-practices.md)
 * [Django](python/django.md)
 * [Flask](python/flask.md)
