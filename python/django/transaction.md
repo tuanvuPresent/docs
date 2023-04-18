@@ -26,3 +26,12 @@
     # celery task
     transaction.on_commit(lambda: my_fav_task.delay(param1))
 ```
+
+```
+cursor = connection.cursor()
+cursor.execute('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE')
+    +  READ COMMITTED
+    +  READ UNCOMMITTED
+    +  REPEATABLE READS
+    +  SERIALIZABLE
+```
