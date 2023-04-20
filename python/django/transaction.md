@@ -30,8 +30,8 @@
 ```
 cursor = connection.cursor()
 cursor.execute('SET TRANSACTION ISOLATION LEVEL SERIALIZABLE')
-    +  READ COMMITTED
-    +  READ UNCOMMITTED
-    +  REPEATABLE READ
-    +  SERIALIZABLE
+    +  READ COMMITTED: read data đã commit
+    +  READ UNCOMMITTED: read data chưa commit
+    +  REPEATABLE READ: read data không thay đổi trong 1 transaction
+    +  SERIALIZABLE: lock read và write
 ```
