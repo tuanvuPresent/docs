@@ -34,6 +34,11 @@
 * [Migrate database best](database/migrate-database-best.md)
 * [Datatype](database/datatype.md)
 
+## Cache
+
+* [Caching strategies](cache/caching-strategies.md)
+* [Cache replacement policies](cache/cache-replacement-policies.md)
+
 ## Message queue
 
 * [Message queue](<README (1).md>)
