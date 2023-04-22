@@ -47,6 +47,8 @@
 
 * [Clean code](other/clean-code.md)
 * [Design pattern](other/design-pattern.md)
+* [Encode-decode](other/encode-decode.md)
+* [Security](other/security.md)
 
 ## deploy
 
