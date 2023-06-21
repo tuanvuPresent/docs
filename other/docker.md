@@ -16,16 +16,13 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && \
     apt-get install -y --no-install-recommends gcc
 
-RUN python -m venv /opt/venv
-ENV PATH="/opt/venv/bin:$PATH"
-
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
 FROM python:3.8-slim
 
-COPY --from=builder /opt/venv /opt/venv
+COPY --from=builder /usr/local/lib/python3.8/site-packages/ /usr/local/lib/python3.8/site-packages/
+COPY --from=builder /usr/local/bin/ /usr/local/bin/
 WORKDIR /app
-ENV PATH="/opt/venv/bin:$PATH"
 ```
