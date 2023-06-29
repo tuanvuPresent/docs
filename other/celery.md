@@ -278,4 +278,11 @@ def import_feed(self, feed_url):
 - accept_content
 - result_accept_content
 - worker_concurrency
-- task_ignore_result
+- task_ignore_result: Xác định xem Celery có nên lưu trữ kết quả của một nhiệm vụ hay không
+- time_limit: Xác định thời gian tối đa mà một nhiệm vụ cụ thể được phép chạy trước khi bị hủy bỏ
+- task_soft_time_limit:  Xác định thời gian mềm tối đa cho một nhiệm vụ
+- task_retry_delay: thử (retry) nhiệm vụ một số lần
+- task_retry_max_retries: khoảng thời gian giữa các lần tái thử
+- worker_prefetch_multiplier: Xác định số lượng tối đa các nhiệm vụ được một worker lấy từ hàng đợi (queue) mỗi lần
+- worker_max_tasks_per_child: Xác định số lượng tối đa các nhiệm vụ mà một worker thực thi trước khi bị khởi động lại
+
