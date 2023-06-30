@@ -285,4 +285,4 @@ def import_feed(self, feed_url):
 - task_retry_max_retries: khoảng thời gian giữa các lần tái thử
 - worker_prefetch_multiplier: Xác định số lượng tối đa các nhiệm vụ được một worker lấy từ hàng đợi (queue) mỗi lần
 - worker_max_tasks_per_child: Xác định số lượng tối đa các nhiệm vụ mà một worker thực thi trước khi bị khởi động lại
-
+- worker_pool: prefork, threads, solo, gevent
