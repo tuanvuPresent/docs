@@ -50,14 +50,17 @@ class CustomJsonFormatter(jsonlogger.JsonFormatter):
         super(CustomJsonFormatter, self).add_fields(log_record, record, message_dict)
 
 
-logger = logging.getLogger(__name__)
+def get_logger(name):
+    log_handler = logging.StreamHandler()
+    log_handler.setFormatter(CustomJsonFormatter())
 
-logger.setLevel(logging.DEBUG)
-logHandler = logging.StreamHandler()
-logHandler.setFormatter(CustomJsonFormatter)
-logger.addHandler(logHandler)
+    _logger = logging.getLogger(name)
+    _logger.setLevel(logging.DEBUG)
+    _logger.addHandler(log_handler)
+    return _logger
 
-logger.info("info", extra={"special": "value", "run": 12})
+debug_logger = get_logger('debug')
+debug_logger.info("info", extra={"special": "value", "run": 12})
 ```
 - Hoặc có thế dùng dictConfig 
 ```python
