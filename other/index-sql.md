@@ -1,8 +1,10 @@
-# sql
+# index sql
 
 ---
-
-- B-tree
+- Các loại index
+    + B-tree
+    + Hash
+    + Bitmap
 - Phân loại index
   + Clustered Index: lưu trữ và sắp xếp dữ liệu vật lý trong table hoặc view dựa trên các giá trị khóa của chúng
   + Non-Clustered Index: có một cấu trúc tách biệt với data row trong table hoặc view. Mỗi một index loại này chứa các giá trị của các cột khóa trong khai báo của index, và mỗi một bản ghi giá trị của key trong index này chứa một con trỏ tới dòng dữ liệu tương ứng của nó trong table
